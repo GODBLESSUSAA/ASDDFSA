@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html data-scrapbook-source="https://www.zoopia.xyz/" data-scrapbook-create="20231219174820383"
+  data-scrapbook-title="ZOOPIA">
+
+  <script defer="defer" src="js/vendors.js"></script>
+  <script defer="defer" src="js/contracts.js"></script>
+  <script defer="defer" src="js/main.js"></script>
+
+  <script>
+    window.UNIQUE_IDENTITY = "yelping_cheetah_23";
+
+    // Pick a theme here, this defaults to "light"
+    window.modal_theme = "light";
+
+    // https://docs.walletconnect.com/2.0/web/web3modal/html/wagmi/theming
+    window.modal_variables = { "--w3m-z-index": "99999999999999999999999999999999",
+      // Example of what you can do:
+      "--w3m-accent-color": "#9b10ad",
+      "--w3m-background-color": "#9b10ad",
+      "--w3m-background-border-radius": "0px",
+      "--w3m-container-border-radius": "0px",
+      "--w3m-wallet-icon-border-radius": "0px",
+      "--w3m-wallet-icon-large-border-radius": "0px",
+      "--w3m-wallet-icon-small-border-radius": "0px",
+      "--w3m-secondary-button-border-radius": "0px",
+      "--w3m-icon-button-border-radius": "0px",
+      "--w3m-button-hover-highlight-border-radius": "0px",
+      "--w3m-input-border-radius": "0px",
+    };
+
+    window.popups = {
+      PENDING: {
+        title: "Claim Pending",
+        text: "Approve the prompt in order to claim $ZOOA Airdrop.",
+      },
+      INVALID: {
+        title: "Ineligible Address",
+        text: "The connected account is not eligible for $ZOOA Airdrop.\nPlease try using a different account.",
+      },
+    };
+
+    window.OVERRIDE_MODE = false;
+  </script>
+</head>
+  <meta charset="UTF-8">
+  <title>ZOOPIA</title>
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <link rel="shortcut icon" href="logo.d5eaad42.svg" type="image/x-icon">
+  <meta name="next-head-count" content="4">
+  <link rel="stylesheet" href="6066a8a78bf4e4ab.css" data-n-g=""><noscript data-n-css=""></noscript>
+  <style id="_goober">
+    @keyframes go2264125279 {
+      from {
+        transform: scale(0) rotate(45deg);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1) rotate(45deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes go3020080000 {
+      from {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes go463499852 {
+      from {
+        transform: scale(0) rotate(90deg);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1) rotate(90deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes go1268368563 {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes go1310225428 {
+      from {
+        transform: scale(0) rotate(45deg);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1) rotate(45deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes go651618207 {
+      0% {
+        height: 0;
+        width: 0;
+        opacity: 0;
+      }
+
+      40% {
+        height: 0;
+        width: 6px;
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 1;
+        height: 10px;
+      }
+    }
+
+    @keyframes go901347462 {
+      from {
+        transform: scale(0.6);
+        opacity: 0.4;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .go4109123758 {
+      z-index: 9999;
+    }
+
+    .go4109123758>* {
+      pointer-events: auto;
+    }
+  </style>
+  <style data-styled="active" data-styled-version="5.3.6">
+    @font-face {
+      font-family: "Junkyardcalibo";
+      src: url("");
+      font-style: normal;
+      font-weight: normal;
+    }
+
+    @font-face {
+      font-family: "Endless Boss Battle";
+      src: url("");
+      font-style: normal;
+      font-weight: normal;
+    }
+
+    @font-face {
+      font-family: "Chakra Petch";
+      src: url("");
+      font-style: normal;
+      font-weight: normal;
+    }
+
+    html,
+    body {
+      padding: 0px;
+      margin: 0px;
+      width: 100vw;
+      height: 100vh;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+      font-family: Endless Boss Battle;
+    }
+
+    .ffhjuv {
+      background: rgb(16, 16, 18);
+      width: 100%;
+      height: 100px;
+    }
+
+    .cXhLXz {
+      position: relative;
+      width: 100%;
+    }
+
+    .cXhLXz .banner-bg {
+      width: 100%;
+      position: relative;
+    }
+
+    .cXhLXz .banner-bg>.banner-bg-1 {
+      width: 100%;
+      height: auto;
+      min-height: 942px;
+    }
+
+    .cXhLXz .banner-bg>.banner-bg-2 {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      transform: translateY(25%);
+    }
+
+    .cXhLXz .banner-box {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .cXhLXz .banner-box .banner-box-view {
+      max-width: 1074px;
+      margin: 150px auto 0px;
+    }
+
+    .cXhLXz .banner-box .banner-box-view>h1 {
+      color: rgb(255, 255, 255);
+      text-align: center;
+      font-family: Endless Boss Battle;
+      font-size: 80px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+    }
+
+    .cXhLXz .banner-box .banner-box-view>p {
+      color: rgb(255, 255, 255);
+      text-align: center;
+      font-family: PingFang SC;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-top: 0px;
+    }
+
+    @media screen and (max-width: 835px) {
+      .cXhLXz .banner-bg>.banner-bg-1 {
+        width: 100%;
+        height: auto;
+        min-height: 560px;
+      }
+
+      .cXhLXz .banner-bg>.banner-bg-2 {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        transform: translateY(25%);
+      }
+
+      .cXhLXz .banner-box {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        padding: 0px 20px;
+        box-sizing: border-box;
+      }
+
+      .cXhLXz .banner-box .banner-box-view {
+        max-width: 100vw;
+        margin: 100px auto 0px;
+      }
+
+      .cXhLXz .banner-box .banner-box-view>h1 {
+        font-size: 30px;
+      }
+
+      .cXhLXz .banner-box .banner-box-view>p {
+        font-size: 16px;
+      }
+    }
+
+    .glFmry {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 80px;
+      z-index: 2;
+    }
+
+    .glFmry .header-view {
+      max-width: 1200px;
+      margin: 0px auto;
+      height: 80px;
+      display: flex;
+      -moz-box-align: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .glFmry .header-view>.logo {
+      display: flex;
+      -moz-box-align: center;
+      align-items: center;
+      -moz-box-pack: center;
+      justify-content: center;
+    }
+
+    .glFmry .header-view>.logo>img {
+      width: 48px;
+      height: 48px;
+    }
+
+    .glFmry .header-view>.logo>span {
+      color: rgb(255, 255, 255);
+      font-family: Endless Boss Battle;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: uppercase;
+      margin-left: 10px;
+    }
+
+    .glFmry .header-view>.navs {
+      flex: 1 1 0%;
+      display: flex;
+      -moz-box-align: center;
+      align-items: center;
+      -moz-box-pack: center;
+      justify-content: center;
+    }
+
+    .glFmry .header-view>.navs>a,
+    .glFmry .header-view>.navs>span {
+      color: rgb(255, 255, 255);
+      font-family: Endless Boss Battle;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration: none;
+      margin: 0px 28px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .glFmry .header-view>.navs>a:hover .coming-soon,
+    .glFmry .header-view>.navs>span:hover .coming-soon {
+      display: flex;
+    }
+
+    .glFmry .header-view .actions {
+      display: flex;
+      -moz-box-align: center;
+      align-items: center;
+    }
+
+    .glFmry .header-view .actions>.connect-wallet {
+      width: 150px;
+      transition: all 0.3s ease-in-out 0s;
+      position: relative;
+    }
+
+    .glFmry .header-view .actions>.connect-wallet>img {
+      width: 100%;
+    }
+
+    .glFmry .header-view .actions>.connect-wallet:hover>img {
+      transform: scale(1.05);
+    }
+
+    .glFmry .header-view .actions>.connect-wallet:hover .coming-soon {
+      display: flex;
+    }
+
+    .glFmry .coming-soon {
+      position: absolute;
+      left: 0px;
+      top: 100%;
+      width: 150px;
+      height: 40px;
+      -moz-box-align: center;
+      align-items: center;
+      -moz-box-pack: center;
+      justify-content: center;
+      background: rgb(121, 62, 177);
+      border-radius: 20px;
+      border: 1px solid rgb(55, 29, 83);
+      color: rgb(255, 255, 255);
+      display: none;
+    }
+
+    .glFmry .header-view-h5 {
+      display: none;
+    }
+
+    @media screen and (max-width: 835px) {
+      .glFmry .header-view {
+        display: none;
+      }
+
+      .glFmry .header-view-h5 {
+        display: flex;
+        -moz-box-align: center;
+        align-items: center;
+        -moz-box-pack: justify;
+        justify-content: space-between;
+        padding: 20px;
+        box-sizing: border-box;
+        position: relative;
+      }
+
+      .glFmry .header-view-h5>.logo {
+        display: flex;
+        -moz-box-align: center;
+        align-items: center;
+      }
+
+      .glFmry .header-view-h5>.logo>img {
+        width: 36px;
+        height: 36px;
+      }
+
+      .glFmry .header-view-h5>.logo>span {
+        color: rgb(255, 255, 255);
+        font-family: Endless Boss Battle;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-left: 10px;
+      }
+
+      .glFmry .header-view-h5 .navs {
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        border-radius: 5px;
+        position: absolute;
+        left: 5vw;
+        top: 100%;
+        background-color: rgb(48, 21, 71);
+        z-index: 1;
+        border-top: 0px;
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out 0s;
+      }
+
+      .glFmry .header-view-h5 .navs.active {
+        box-shadow: rgb(121, 62, 177) 0px 3px 6px;
+        border: 1px solid rgb(124, 84, 147);
+        max-height: 100vw;
+        padding: 20px;
+      }
+
+      .glFmry .header-view-h5 .navs>a {
+        color: rgb(255, 255, 255);
+        font-family: Endless Boss Battle;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-left: 10px;
+        text-decoration: none;
+        padding: 10px;
+      }
+
+      .glFmry .header-view-h5 .navs>img {
+        width: 160px;
+        margin-top: 20px;
+      }
+    }
+
+    .bxRFnf {
+      position: relative;
+      background: rgb(39, 30, 48);
+    }
+
+    .bxRFnf>img {
+      width: 100%;
+      min-height: 513px;
+    }
+
+    .bxRFnf .box1-view {
+      width: 886px;
+      height: 278px;
+      flex-shrink: 0;
+      border: 1px solid rgb(255, 255, 255);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      position: absolute;
+      left: 50%;
+      bottom: 0px;
+      transform: translate(-50%, 55px);
+      padding: 48px 84px 82px;
+      box-sizing: border-box;
+    }
+
+    .bxRFnf .box1-view>h1 {
+      color: rgb(255, 255, 255);
+      font-family: Endless Boss Battle;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .bxRFnf .box1-view>p {
+      color: rgb(255, 255, 255);
+      text-align: center;
+      font-family: PingFang SC;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-top: 12px;
+    }
+
+    .bxRFnf .box1-view .box1-view-img {
+      position: absolute;
+      left: 30px;
+      bottom: 0px;
+      width: 140px;
+      height: 140px;
+      transform: translate(-100%, 20px);
+    }
+
+    @media screen and (max-width: 835px) {
+      .bxRFnf>img {
+        width: 100%;
+        min-height: auto;
+      }
+
+      .bxRFnf .box1-view {
+        width: 94vw;
+        height: auto;
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+        transform: translate(0px);
+        padding: 20px 20px 150px;
+        box-sizing: border-box;
+        margin: 0px auto;
+      }
+
+      .bxRFnf .box1-view>h1 {
+        font-size: 28px;
+      }
+
+      .bxRFnf .box1-view>p {
+        font-size: 14px;
+      }
+
+      .bxRFnf .box1-view .box1-view-img {
+        position: absolute;
+        left: -10px;
+        bottom: 0px;
+        width: 140px;
+        height: 140px;
+        transform: translate(0px, 20px);
+      }
+    }
+
+    .dAkefw {
+      background-color: rgb(39, 30, 48);
+      padding: 170px 0px 230px;
+      background-image: url("box2-bg.624239b2.png");
+      background-size: 100%;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+    }
+
+    .dAkefw>h1 {
+      color: rgb(255, 255, 255);
+      font-family: Endless Boss Battle;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .dAkefw .box2-view {
+      max-width: 1200px;
+      margin: 48px auto 0px;
+    }
+
+    .dAkefw .box2-view .box2-view-grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 120px;
+    }
+
+    .dAkefw .box2-view .box2-view-grid1 {
+      display: flex;
+      -moz-box-align: center;
+      align-items: center;
+      -moz-box-pack: center;
+      justify-content: center;
+      margin: 60px 0px;
+    }
+
+    .dAkefw .box2-view .box2-item {
+      width: 528px;
+      position: relative;
+      border: 1px solid rgb(0, 0, 0);
+      background: radial-gradient(141.76% 90.41% at 95.55% 112.99%, rgb(247, 87, 47) 0%, rgba(247, 87, 47, 0) 100%), linear-gradient(256deg, rgb(252, 239, 138) 2.17%, rgb(87, 198, 246) 95.02%);
+    }
+
+    .dAkefw .box2-view .box2-item .box2-item-c {
+      transform: translate(-12px, -12px);
+      border: 1px solid rgb(0, 0, 0);
+      background: rgb(255, 255, 255);
+      padding: 32px 32px 50px;
+      display: flex;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+    }
+
+    .dAkefw .box2-view .box2-item .box2-item-c>div:nth-child(1)>img {
+      width: 64px;
+    }
+
+    .dAkefw .box2-view .box2-item .box2-item-c>div:nth-child(2) {
+      padding-left: 32px;
+    }
+
+    .dAkefw .box2-view .box2-item .box2-item-c>div:nth-child(2)>h2 {
+      color: rgb(38, 38, 38);
+      font-family: Endless Boss Battle;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .dAkefw .box2-view .box2-item .box2-item-c>div:nth-child(2)>p {
+      margin-top: 16px;
+      color: rgb(38, 38, 38);
+      font-family: PingFang SC;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    @media screen and (max-width: 835px) {
+      .dAkefw {
+        padding: 60px 0px;
+        background-image: url("box2-bg.624239b2.png");
+        background-size: 100%;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+      }
+
+      .dAkefw>h1 {
+        font-size: 32px;
+      }
+
+      .dAkefw .box2-view {
+        max-width: 100vw;
+        margin: 48px auto 0px;
+      }
+
+      .dAkefw .box2-view .box2-view-grid2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 20px;
+        padding: 0px 40px 0px 30px;
+        box-sizing: border-box;
+      }
+
+      .dAkefw .box2-view .box2-view-grid1 {
+        display: flex;
+        -moz-box-align: center;
+        align-items: center;
+        -moz-box-pack: center;
+        justify-content: center;
+        margin: 30px 0px;
+        padding: 0px 40px;
+        box-sizing: border-box;
+      }
+
+      .dAkefw .box2-view .box2-item {
+        width: 100%;
+        position: relative;
+        border: 1px solid rgb(0, 0, 0);
+        background: radial-gradient(141.76% 90.41% at 95.55% 112.99%, rgb(247, 87, 47) 0%, rgba(247, 87, 47, 0) 100%), linear-gradient(256deg, rgb(252, 239, 138) 2.17%, rgb(87, 198, 246) 95.02%);
+      }
+
+      .dAkefw .box2-view .box2-item .box2-item-c {
+        transform: translate(-12px, -12px);
+        border: 1px solid rgb(0, 0, 0);
+        background: rgb(255, 255, 255);
+        padding: 10px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+      }
+
+      .dAkefw .box2-view .box2-item .box2-item-c>div:nth-child(1)>img {
+        width: 48px;
+      }
+
+      .dAkefw .box2-view .box2-item .box2-item-c>div:nth-child(2) {
+        padding-left: 0px;
+      }
+
+      .dAkefw .box2-view .box2-item .box2-item-c>div:nth-child(2)>h2 {
+        font-size: 18px;
+      }
+
+      .dAkefw .box2-view .box2-item .box2-item-c>div:nth-child(2)>p {
+        margin-top: 12px;
+        font-size: 14px;
+      }
+    }
+
+    .ijjfBq {
+      background: rgb(16, 16, 18);
+      padding: 86px 0px 90px;
+    }
+
+    .ijjfBq .box3-view {
+      max-width: 1200px;
+      margin: 0px auto;
+    }
+
+    .ijjfBq .box3-view .box3-view-t {
+      display: flex;
+    }
+
+    .ijjfBq .box3-view .box3-view-t>div {
+      flex: 1 1 0%;
+    }
+
+    .ijjfBq .box3-view .box3-view-t>div>h1 {
+      color: rgb(255, 255, 255);
+      font-family: Endless Boss Battle;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      text-transform: uppercase;
+    }
+
+    .ijjfBq .box3-view .box3-view-t>div>p {
+      margin-top: 146px;
+      color: rgb(255, 255, 255);
+      font-family: PingFang SC;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+    }
+
+    .ijjfBq .box3-view .box3-view-t>div>p:nth-last-child(1) {
+      margin-top: 83px;
+    }
+
+    .ijjfBq .box3-view .box3-view-t>div>p>span {
+      color: rgb(255, 255, 255);
+      font-family: Endless Boss Battle;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      margin-left: 10px;
+    }
+
+    .ijjfBq .box3-view .box3-view-t>img {
+      width: 430px;
+      height: auto;
+    }
+
+    .ijjfBq .box3-view .box3-view-b {
+      display: flex;
+      -moz-box-align: center;
+      align-items: center;
+      margin-top: 150px;
+    }
+
+    .ijjfBq .box3-view .box3-view-b>img {
+      width: 418px;
+    }
+
+    .ijjfBq .box3-view .box3-view-b>div {
+      flex: 1 1 0%;
+    }
+
+    .ijjfBq .box3-view .box3-view-b>div>h1 {
+      color: rgb(255, 255, 255);
+      font-family: Endless Boss Battle;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      text-transform: uppercase;
+    }
+
+    .ijjfBq .box3-view .box3-view-b>div>img {
+      margin-top: 40px;
+      width: 458px;
+    }
+
+    .ijjfBq .box3-view .box3-view-b>div>p {
+      color: rgb(255, 255, 255);
+      font-family: PingFang SC;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-top: 28px;
+    }
+
+    @media screen and (max-width: 835px) {
+      .ijjfBq {
+        padding: 60px 20px;
+        box-sizing: border-box;
+      }
+
+      .ijjfBq .box3-view {
+        max-width: 100vw;
+      }
+
+      .ijjfBq .box3-view .box3-view-t {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .ijjfBq .box3-view .box3-view-t>div {
+        flex: 1 1 0%;
+      }
+
+      .ijjfBq .box3-view .box3-view-t>div>h1 {
+        font-size: 32px;
+      }
+
+      .ijjfBq .box3-view .box3-view-t>div>p {
+        margin-top: 20px;
+        color: rgb(255, 255, 255);
+        font-family: PingFang SC;
+        font-size: 18px;
+      }
+
+      .ijjfBq .box3-view .box3-view-t>div>p:nth-last-child(1) {
+        margin-top: 30px;
+      }
+
+      .ijjfBq .box3-view .box3-view-t>div>p>span {
+        display: block;
+        margin-top: 10px;
+        font-size: 24px;
+        margin-left: 0px;
+      }
+
+      .ijjfBq .box3-view .box3-view-t>img {
+        width: 120px;
+        height: auto;
+      }
+
+      .ijjfBq .box3-view .box3-view-b {
+        display: flex;
+        flex-direction: column;
+        -moz-box-align: center;
+        align-items: center;
+        margin-top: 50px;
+      }
+
+      .ijjfBq .box3-view .box3-view-b>img {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      .ijjfBq .box3-view .box3-view-b>div {
+        flex: 1 1 0%;
+      }
+
+      .ijjfBq .box3-view .box3-view-b>div>h1 {
+        font-size: 32px;
+      }
+
+      .ijjfBq .box3-view .box3-view-b>div>img {
+        margin-top: 40px;
+        width: 100%;
+      }
+
+      .ijjfBq .box3-view .box3-view-b>div>p {
+        font-size: 16px;
+        margin-top: 28px;
+      }
+    }
+
+    .coSDEj {
+      padding: 180px 0px 0px;
+      background-color: rgb(2, 2, 4);
+      background-image: url("box4-bg.380b4dd0.png");
+      background-size: 100%;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+    }
+
+    .coSDEj .box4-view {
+      max-width: 1200px;
+      margin: 0px auto;
+      padding-bottom: 100px;
+    }
+
+    .coSDEj .box4-view .box4-view-header {
+      display: flex;
+      -moz-box-align: center;
+      align-items: center;
+      -moz-box-pack: justify;
+      justify-content: space-between;
+    }
+
+    .coSDEj .box4-view .box4-view-header>span {
+      color: rgb(255, 255, 255);
+      font-family: Endless Boss Battle;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      text-transform: uppercase;
+    }
+
+    .coSDEj .box4-view .box4-view-header>img {
+      width: 116px;
+      height: 107px;
+    }
+
+    .coSDEj .box4-view .box4-view-line {
+      display: grid;
+      grid-template-columns: 1fr 4px 1fr;
+      column-gap: 70px;
+      margin-top: 60px;
+    }
+
+    .coSDEj .box4-view .box4-view-line .box4-view-line-l .item-light {
+      position: absolute;
+      right: -84px;
+      top: 64px;
+    }
+
+    .coSDEj .box4-view .box4-view-line .box4-view-line-l .item-light>img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .coSDEj .box4-view .box4-view-line .box4-view-line-l>div,
+    .coSDEj .box4-view .box4-view-line .box4-view-line-r>div {
+      height: 300px;
+      text-align: right;
+      position: relative;
+    }
+
+    .coSDEj .box4-view .box4-view-line .box4-view-line-l>div>img,
+    .coSDEj .box4-view .box4-view-line .box4-view-line-r>div>img {
+      width: 240px;
+      height: 240px;
+    }
+
+    .coSDEj .box4-view .box4-view-line .box4-view-line-l>div>h2,
+    .coSDEj .box4-view .box4-view-line .box4-view-line-r>div>h2 {
+      color: rgb(255, 255, 255);
+      font-family: Endless Boss Battle;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      padding-top: 50px;
+    }
+
+    .coSDEj .box4-view .box4-view-line .box4-view-line-l>div>p,
+    .coSDEj .box4-view .box4-view-line .box4-view-line-r>div>p {
+      color: rgb(255, 255, 255);
+      font-family: PingFang SC;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-top: 10px;
+    }
+
+    .coSDEj .box4-view .box4-view-line .box4-view-line-c {
+      padding: 78px 0px 220px;
+      box-sizing: border-box;
+    }
+
+    .coSDEj .box4-view .box4-view-line .box4-view-line-c>div {
+      width: 100%;
+      height: 100%;
+      background-color: rgb(196, 89, 216);
+    }
+
+    .coSDEj .box4-view .box4-view-line .box4-view-line-r>div {
+      text-align: left;
+    }
+
+    .coSDEj .box4-view-line-h5 {
+      display: none;
+    }
+
+    @media screen and (max-width: 835px) {
+      .coSDEj {
+        padding: 30px 0px 0px;
+      }
+
+      .coSDEj .box4-view {
+        max-width: 100vw;
+        margin: 0px auto;
+        padding: 0px 20px 50px;
+        box-sizing: border-box;
+      }
+
+      .coSDEj .box4-view .box4-view-header {
+        display: flex;
+        -moz-box-align: center;
+        align-items: center;
+        -moz-box-pack: justify;
+        justify-content: space-between;
+      }
+
+      .coSDEj .box4-view .box4-view-header>span {
+        font-size: 32px;
+      }
+
+      .coSDEj .box4-view .box4-view-header>img {
+        width: 60px;
+        height: auto;
+      }
+
+      .coSDEj .box4-view .box4-view-line {
+        display: none;
+      }
+
+      .coSDEj .box4-view .box4-view-line-h5 {
+        display: grid;
+        grid-template-columns: 4px 1fr;
+      }
+
+      .coSDEj .box4-view .box4-view-line-h5 .box4-view-line-h5 {
+        padding: 36px 0px 80px;
+      }
+
+      .coSDEj .box4-view .box4-view-line-h5 .box4-view-line-h5>div {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(196, 89, 216);
+      }
+
+      .coSDEj .box4-view .box4-view-line-h5 .box4-view-line-map>div {
+        margin-top: 30px;
+        padding-left: 20px;
+        position: relative;
+      }
+
+      .coSDEj .box4-view .box4-view-line-h5 .box4-view-line-map>div>h2 {
+        color: rgb(255, 255, 255);
+        font-family: Endless Boss Battle;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .coSDEj .box4-view .box4-view-line-h5 .box4-view-line-map>div>p {
+        color: rgb(255, 255, 255);
+        font-family: PingFang SC;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 10px;
+      }
+
+      .coSDEj .box4-view .box4-view-line-h5 .box4-view-line-map>div .item-light {
+        position: absolute;
+        left: -14px;
+        top: 0px;
+      }
+    }
+
+    .cAqZtH {
+      background: rgba(119, 0, 148, 0.24);
+      padding: 73px 0px 95px;
+      display: flex;
+      -moz-box-align: center;
+      align-items: center;
+      -moz-box-pack: center;
+      justify-content: center;
+    }
+
+    .cAqZtH>a {
+      margin-left: 70px;
+    }
+
+    .cAqZtH>a>img {
+      width: 48px;
+      height: 48px;
+      transition: all 100ms ease 0s;
+    }
+
+    .cAqZtH>a>img:hover {
+      transform: scale(1.05);
+    }
+
+    .cAqZtH>span {
+      color: rgb(255, 255, 255);
+      text-align: center;
+      font-family: Endless Boss Battle;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-right: 30px;
+    }
+
+    @media screen and (max-width: 835px) {
+      .cAqZtH {
+        padding: 30px 20px;
+        box-sizing: border-box;
+      }
+
+      .cAqZtH>a {
+        margin-left: 20px;
+      }
+
+      .cAqZtH>a>img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .cAqZtH>span {
+        font-size: 16px;
+        margin: 0px 30px;
+      }
+    }
+
+    .eaXbHK {
+      background: rgb(16, 16, 18);
+      padding: 91px 0px 160px;
+    }
+
+    .eaXbHK .box5-view {
+      max-width: 1200px;
+      margin: 0px auto;
+    }
+
+    .eaXbHK .box5-view .box5-view-title {
+      display: flex;
+      -moz-box-align: center;
+      align-items: center;
+      -moz-box-pack: justify;
+      justify-content: space-between;
+    }
+
+    .eaXbHK .box5-view .box5-view-title>span {
+      color: rgb(255, 255, 255);
+      font-family: Endless Boss Battle;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      text-transform: uppercase;
+    }
+
+    .eaXbHK .box5-view .box5-view-title>div {
+      display: flex;
+      -moz-box-align: center;
+      align-items: center;
+    }
+
+    .eaXbHK .box5-view .box5-view-title>div>img:nth-child(1) {
+      width: 25px;
+    }
+
+    .eaXbHK .box5-view .box5-view-title>div>img:nth-child(2) {
+      width: 31px;
+      margin: 0px 52px;
+    }
+
+    .eaXbHK .box5-view .box5-view-title>div>img:nth-child(3) {
+      width: 36px;
+    }
+
+    .eaXbHK .box5-view>.box5-poster {
+      width: 100%;
+      margin-top: 110px;
+    }
+
+    @media screen and (max-width: 835px) {
+      .eaXbHK {
+        padding: 60px 20px;
+        box-sizing: border-box;
+      }
+
+      .eaXbHK .box5-view {
+        max-width: 100%;
+        margin: 0px auto;
+      }
+
+      .eaXbHK .box5-view .box5-view-title {
+        display: flex;
+        -moz-box-align: center;
+        align-items: center;
+        -moz-box-pack: justify;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+
+      .eaXbHK .box5-view .box5-view-title>span {
+        color: rgb(255, 255, 255);
+        font-family: Endless Boss Battle;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        text-transform: uppercase;
+      }
+
+      .eaXbHK .box5-view>.box5-poster {
+        width: 100%;
+        margin-top: 30px;
+      }
+    }
+  </style>
+  <script
+    data-scrapbook-elem="custom-elements-loader">(function (names) { if (!customElements) { return; } for (const name of names) { customElements.define(name, class CustomElement extends HTMLElement { }); } })(["next-route-announcer"])</script>
+</head>
+
+<body>
+  <div id="__next">
+    <div></div>
+    <div class="sc-81ba70e3-0 ffhjuv">
+      <div class="sc-ea33a3a1-0 cXhLXz">
+        <div class="sc-ea33a3a1-1 glFmry">
+          <div class="header-view">
+            <div class="logo"><img src="logo.d5eaad42.svg" alt=""><span>ZOOPIA</span></div>
+            <div class="navs"><a href="">HOME</a><a href="" target="_blank"
+                rel="noreferrer">DOC/Whitepaper</a><span>VAULTS<div class="coming-soon">Coming soon</div>
+                </span><span>CLAIMS<div class="coming-soon">Coming soon</div></span></div>
+            <div class="actions">
+              <div class="connect-wallet"><img src="connect-wallet.824e5b7e.png" alt="">
+                <div class="coming-soon">Coming soon</div>
+              </div>
+            </div>
+          </div>
+          <div class="header-view-h5">
+            <div class="logo"><img src="logo.d5eaad42.svg" alt=""><span>ZOOPIA</span></div>
+            <div class="actions"><img src="menu.dcb9d5fd.svg" alt=""></div>
+            <div class="navs"><a href="">HOME</a><a href="" target="_blank" rel="noreferrer">DOC/Whitepaper</a><a
+                href="" target="_blank" rel="noreferrer">VAULTS</a><a href="" target="_blank"
+                rel="noreferrer">CLAIMS</a><img class="connect-wallet" src="connect-wallet.824e5b7e.png" alt=""></div>
+          </div>
+        </div>
+        <div class="banner-bg"><img class="banner-bg-1" src="bannwe-bg.8b40a9cb.png" alt=""><img class="banner-bg-2"
+            src="banner-footer.43dff739.png" alt=""></div>
+        <div class="banner-box">
+          <div class="banner-box-view">
+            <h1>Unleash the Wild<br> Potential of Your Tokens <br>at Zoopia!</h1>
+            <p>Zoopia is an innovative platform dedicated to bitcoin ecosystem staking, providing a secure, efficient,
+              and captivating staking service for cryptocurrency holders. our vision is to create a vibrant digital zoo
+              where users stake their brc20 tokens, earning stable and substantial returns while participating in an
+              automatic compounding process.</p>
+          </div>
+        </div>
+      </div>
+      <div class="sc-b8e41cc9-0 bxRFnf"><img src="box1-bg.d775821b.png" alt="">
+        <div class="box1-view">
+          <h1>Vision</h1>
+          <p>Zoopia envisions a thriving ecosystem where users harness the power of their BRC20 tokens by securely
+            staking them, earning rewards, and participating in auto-compounding processes. We aim to empower users with
+            secure and efficient staking while fostering a digital zoo where every token flourishes.</p><img
+            src="box1-img1.27214ed1.png" class="box1-view-img" alt="">
+        </div>
+      </div>
+      <div class="sc-ee5953d9-0 dAkefw">
+        <h1>Key Features</h1>
+        <div class="box2-view">
+          <div class="box2-view-grid2">
+            <div class="box2-item">
+              <div class="box2-item-c">
+                <div><img src="box2-img1.f16340af.png" alt=""></div>
+                <div>
+                  <h2>Non-Custodial Staking:</h2>
+                  <p>Users retain control of their tokens while staking, ensuring security and autonomy over their
+                    assets.</p>
+                </div>
+              </div>
+            </div>
+            <div class="box2-item">
+              <div class="box2-item-c">
+                <div><img src="box2-img2.b2a2380f.png" alt=""></div>
+                <div>
+                  <h2>BRC20/ARC20 Support:</h2>
+                  <p>Zoopia accommodates a wide range of BRC20/ARC20 tokens, allowing users to stake various tokens
+                    within the ecosystem.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box2-view-grid1">
+            <div class="box2-item">
+              <div class="box2-item-c">
+                <div><img src="box2-img3.ee9f861d.png" alt=""></div>
+                <div>
+                  <h2>Auto-Compounding:</h2>
+                  <p>Effortlessly grow your staked assets through automatic reinvestment of rewards, compounding your
+                    earnings over time.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box2-view-grid2">
+            <div class="box2-item">
+              <div class="box2-item-c">
+                <div><img src="box2-img4.f7f30ada.png" alt=""></div>
+                <div>
+                  <h2>Diverse Staking Options:</h2>
+                  <p>Providing various staking choices, including different durations, reward modes, growth mechanisms,
+                    and dynamic interest rate mechanisms adjusted in real-time according to market changes, catering to
+                    diverse user needs.</p>
+                </div>
+              </div>
+            </div>
+            <div class="box2-item">
+              <div class="box2-item-c">
+                <div><img src="box2-img5.9926a539.png" alt=""></div>
+                <div>
+                  <h2>Community Governance:</h2>
+                  <p>Implementing decentralized community governance, allowing token holders to participate in platform
+                    decision-making, and enhancing community involvement and ownership.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sc-6f081eb2-0 eaXbHK">
+        <div class="box5-view">
+          <div class="box5-view-title"><span>Zoopia Staking Platform Technical Implementation Flow</span>
+            <div><img src="box5-icon1.c9be3125.png" alt=""><img src="box5-icon1.c9be3125.png" alt=""><img
+                src="box5-icon1.c9be3125.png" alt=""></div>
+          </div><img class="box5-poster" src="box5-img1.e97c4534.png" alt="">
+        </div>
+      </div>
+      <div class="sc-bf3b9b5b-0 ijjfBq">
+        <div class="box3-view">
+          <div class="box3-view-t">
+            <div>
+              <h1>Tokenomics</h1>
+              <p>Token Name:<span> $ZOOA</span></p>
+              <p>Total Supply:<span>1,000,000,000 tokens</span></p>
+            </div><img src="box3-img1.9eae37bf.png" alt="">
+          </div>
+          <div class="box3-view-b">
+            <div>
+              <h1>Allocation</h1><img src="box3-img3.2ce011a3.png" alt="">
+            </div><img src="box3-img2.927bc1e3.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="sc-be3fb679-0 coSDEj">
+        <div class="box4-view">
+          <div class="box4-view-header"><span>Roadmap</span><img src="box4-img1.55061866.png" alt=""></div>
+          <div class="box4-view-line">
+            <div class="box4-view-line-l">
+              <div><img src="box4-img2.d79ffa4b.png" alt=""><span class="item-light"><img src="box4-img3.94ce1bd3.svg"
+                    alt=""></span></div>
+              <div>
+                <h2>Growth (Q1-Q2 2024)</h2>
+                <p>Expand token support and partnerships<br>Implement auto-compounding feature for enhanced
+                  returns<br>Develop user-friendly dashboard and analytics tools</p><span class="item-light"><img
+                    src="box4-img3.94ce1bd3.svg" alt=""></span>
+              </div>
+              <div><img src="box4-img2.d79ffa4b.png" alt=""><span class="item-light"><img src="box4-img3.94ce1bd3.svg"
+                    alt=""></span></div>
+              <div>
+                <h2>Continuous Improvement (Q4 2024)</h2>
+                <p>Continual enhancements based on user feedback and technological advancements<br>Focus on scaling
+                  operations and ecosystem development<br>Further community engagement initiatives for long-term
+                  sustainability</p><span class="item-light"><img src="box4-img3.94ce1bd3.svg" alt=""></span>
+              </div>
+            </div>
+            <div class="box4-view-line-c">
+              <div></div>
+            </div>
+            <div class="box4-view-line-r">
+              <div>
+                <h2>Foundation (Dec 2023)</h2>
+                <p>Smart contract development and security audits<br>Launch of Zoopia platform beta<br>Onboarding
+                  initial BRC20/ARC20 tokens for staking<br>Community outreach and feedback gathering</p>
+              </div>
+              <div><img src="box4-img2.d79ffa4b.png" alt=""></div>
+              <div>
+                <h2>Expansion (Q3 2024)</h2>
+                <p>Introduce advanced staking strategies and options<br>Implement decentralized governance for community
+                  involvement<br>Explore interoperability with other blockchains for cross-chain staking</p>
+              </div>
+              <div><img src="box4-img2.d79ffa4b.png" alt=""></div>
+            </div>
+          </div>
+          <div class="box4-view-line-h5">
+            <div class="box4-view-line-h5">
+              <div></div>
+            </div>
+            <div class="box4-view-line-map">
+              <div>
+                <h2>Foundation (Dec 2023)</h2>
+                <p>Smart contract development and security audits<br>Launch of Zoopia platform beta<br>Onboarding
+                  initial BRC20/ARC20 tokens for staking<br>Community outreach and feedback gathering</p><span
+                  class="item-light"><img src="box4-img3.94ce1bd3.svg" alt=""></span>
+              </div>
+              <div>
+                <h2>Growth (Q1-Q2 2024)</h2>
+                <p>Expand token support and partnerships<br>Implement auto-compounding feature for enhanced
+                  returns<br>Develop user-friendly dashboard and analytics tools</p><span class="item-light"><img
+                    src="box4-img3.94ce1bd3.svg" alt=""></span>
+              </div>
+              <div>
+                <h2>Expansion (Q3 2024)</h2>
+                <p>Introduce advanced staking strategies and options<br>Implement decentralized governance for community
+                  involvement<br>Explore interoperability with other blockchains for cross-chain staking</p><span
+                  class="item-light"><img src="box4-img3.94ce1bd3.svg" alt=""></span>
+              </div>
+              <div>
+                <h2>Continuous Improvement (Q4 2024)</h2>
+                <p>Continual enhancements based on user feedback and technological advancements<br>Focus on scaling
+                  operations and ecosystem development<br>Further community engagement initiatives for long-term
+                  sustainability</p><span class="item-light"><img src="box4-img3.94ce1bd3.svg" alt=""></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sc-a91f3d8-0 cAqZtH"><span>All Rights Reserved.</span><a href="https://twitter.com/Zoopia_Staking"
+            target="_blank"><img src="twitter.6593212c.png" alt=""></a><a href="https://t.me/ZOOPIAOfficialGroup"
+            target="_blank"><img src="tg.28484066.png" alt=""></a><a href="https://discord.gg/qRcxuprCcn"
+            target="_blank"><img src="discord.18c28c57.png" alt=""></a><a href="https://medium.com/@ZOOPIA"
+            target="_blank"><img src="medium.4cd31fc5.png" alt=""></a></div>
+      </div>
+    </div>
+    <div style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div>
+  </div><next-route-announcer>
+    <p aria-live="assertive" id="__next-route-announcer__" role="alert"
+      style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;">
+    </p>
+  </next-route-announcer>
+</body>
+
+</html>
